@@ -1,6 +1,6 @@
 {
     "name": "neutronstars/dotrine-enum-php-type",
-    "description": "Added an enumeration system as close as possible to PHP 8.1 for earlier versions.",
+    "description": "Added a doctrine type for the php enumeration system designed to be as close as possible to PHP 8.1 for earlier versions.",
     "type": "library",
     "license": [ "Apache-2.0" ],
     "authors": [
