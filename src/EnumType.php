@@ -16,7 +16,7 @@ abstract class EnumType extends Type
      * @param AbstractPlatform $platform
      * @return string
      */
-    public function getSQLDeclaration(array $column, $platform): string
+    public function getSQLDeclaration(array $column, $platform)
     {
         return Types::STRING;
     }
@@ -26,7 +26,7 @@ abstract class EnumType extends Type
      * @param AbstractPlatform $platform
      * @return string|null
      */
-    public function convertToDatabaseValue($value, $platform): ?string
+    public function convertToDatabaseValue($value, $platform)
     {
         return ($value instanceof Enum) ? (string) $value : null;
     }
