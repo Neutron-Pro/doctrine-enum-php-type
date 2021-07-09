@@ -23,7 +23,7 @@ class FooBarEnumType extends EnumType
      * @return string|void|null
      * @throws \ReflectionException
      */
-    public function convertToPHPValue($value, $platform)
+    public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         return FooBarEnum::from($value);
     }
