@@ -11,12 +11,22 @@ use NeutronStars\Enum\Enum;
 
 abstract class EnumType extends Type
 {
-    public function getSQLDeclaration(array $column, AbstractPlatform $platform): string
+    /**
+     * @param array $column
+     * @param AbstractPlatform $platform
+     * @return string
+     */
+    public function getSQLDeclaration(array $column, $platform): string
     {
         return Types::STRING;
     }
 
-    public function convertToDatabaseValue($value, AbstractPlatform $platform): ?string
+    /**
+     * @param mixed $value
+     * @param AbstractPlatform $platform
+     * @return string|null
+     */
+    public function convertToDatabaseValue($value, $platform): ?string
     {
         return ($value instanceof Enum) ? (string) $value : null;
     }
